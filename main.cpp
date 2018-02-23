@@ -49,7 +49,7 @@
 ****************************************************************************/
 
 #include "document.h"
-#include "mainwindow.h"
+#include "documentwindow.h"
 #include "mdiform.h"
 #include <QApplication>
 #include <QFile>

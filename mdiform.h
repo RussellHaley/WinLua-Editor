@@ -6,6 +6,8 @@
 #include <QWidget>
 #include <QString>
 #include "sol.hpp"
+#include "sol_assert.hpp"
+
 #define SOL_CHECK_ARGUMENTS 1
 
 QT_BEGIN_NAMESPACE
@@ -32,9 +34,13 @@ private slots:
 //    void onFileSaveAs();
     void onExit();
 
-
 private:
     Ui::MdiForm *ui;
+    sol::state *m_pCurrentProject;
+    bool modified;
+    void LoadProject(const QString &path);
+    void ShowError(QString errmsg);
+    bool isModified() const;
 };
 
 #endif // MDIFORM_H

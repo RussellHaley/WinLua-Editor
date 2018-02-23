@@ -4,35 +4,39 @@ QT += webenginewidgets webchannel
 CONFIG += c++11
 
 HEADERS += \
-    mainwindow.h \
     previewpage.h \
     document.h \
     mdiform.h \
-    C:\Users\russh\Git\sol2\single\sol.hpp
+    C:\Users\russh\Git\sol2\single\sol.hpp \
+    sol_assert.hpp \
+    documentwindow.h
 
 SOURCES = \
     main.cpp \
-    mainwindow.cpp \
     previewpage.cpp \
     document.cpp \
-    mdiform.cpp
+    mdiform.cpp \
+    documentwindow.cpp
 
 RESOURCES = \
     resources/markdowneditor.qrc
 
 FORMS += \
-    mainwindow.ui \
-    mdiform.ui
+    mdiform.ui \
+    documentwindow.ui
 
 DISTFILES += \
     resources/3rdparty/MARKDOWN-LICENSE.txt \
     resources/3rdparty/MARKED-LICENSE.txt
 
-win32:INCLUDEPATH += "C:\Program Files (x86)\WinLua\Lua\5.3\include" "C:\Users\russh\Git\sol2\single"
-unix:INCLUDEPATH += "/home/user/extra headers"
+win32:INCLUDEPATH += "C:\Program Files\WinLua\Lua\5.3\include" "C:\Users\russh\Git\sol2\single"
+#win32:INCLUDEPATH += "C:\Program Files\WinLua\Lua\5.3\include" "C:\Users\russh\Git\sol2\single"
+#unix:INCLUDEPATH += "/home/user/extra headers"
 
-win32:LIBS += "C:\Program Files (x86)\WinLua\Lua\5.3\bin\lua53.lib"
-unix:LIBS += "-L/home/user/extra libs" -lextra
+win32:LIBS += "C:\Program Files\WinLua\Lua\5.3\bin\lua53.lib"
+#win32:LIBS += "C:\Program Files\WinLua\Lua\5.3\bin\lua53.lib"
+#win32:LIBS += "C:\Program Files (x86)\WinLua\Lua\5.3\staticlib\lua53.lib"
+#unix:LIBS += "-L/home/user/extra libs" -lextra
 
 # install
 target.path = $$[QT_INSTALL_EXAMPLES]/webenginewidgets/markdowneditor

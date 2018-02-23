@@ -58,17 +58,17 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class MainWindow;
+class DocumentWindow;
 }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class DocumentWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit DocumentWindow(QWidget *parent = nullptr);
+    ~DocumentWindow();
 
     void openFile(const QString &path);
 
@@ -82,7 +82,7 @@ private slots:
 private:
     bool isModified() const;
 
-    Ui::MainWindow *ui;
+    Ui::DocumentWindow *ui;
     QString m_filePath;
     Document m_content;
 };

@@ -19,6 +19,7 @@
 #include <QtWidgets/QMdiArea>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -41,6 +42,7 @@ public:
     QStatusBar *statusbar;
     QDockWidget *dockWidget;
     QWidget *dockWidgetContents;
+    QPushButton *Sol2Button;
 
     void setupUi(QMainWindow *MdiForm)
     {
@@ -67,7 +69,7 @@ public:
         MdiForm->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MdiForm);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 800, 20));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menu_View = new QMenu(menubar);
@@ -80,6 +82,9 @@ public:
         dockWidget->setObjectName(QStringLiteral("dockWidget"));
         dockWidgetContents = new QWidget();
         dockWidgetContents->setObjectName(QStringLiteral("dockWidgetContents"));
+        Sol2Button = new QPushButton(dockWidgetContents);
+        Sol2Button->setObjectName(QStringLiteral("Sol2Button"));
+        Sol2Button->setGeometry(QRect(20, 100, 80, 21));
         dockWidget->setWidget(dockWidgetContents);
         MdiForm->addDockWidget(static_cast<Qt::DockWidgetArea>(1), dockWidget);
 
@@ -110,6 +115,7 @@ public:
         actionE_xit->setText(QApplication::translate("MdiForm", "E&xit", nullptr));
         menuFile->setTitle(QApplication::translate("MdiForm", "File", nullptr));
         menu_View->setTitle(QApplication::translate("MdiForm", "&View", nullptr));
+        Sol2Button->setText(QApplication::translate("MdiForm", "Sol2 Button!", nullptr));
     } // retranslateUi
 
 };

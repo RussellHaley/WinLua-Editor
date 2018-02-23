@@ -48,9 +48,9 @@
 **
 ****************************************************************************/
 
-#include "mainwindow.h"
+#include "documentwindow.h"
 #include "previewpage.h"
-#include "ui_mainwindow.h"
+#include "ui_documentwindow.h"
 
 #include <QFile>
 #include <QFileDialog>
@@ -59,9 +59,9 @@
 #include <QTextStream>
 #include <QWebChannel>
 
-MainWindow::MainWindow(QWidget *parent) :
+DocumentWindow::DocumentWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::DocumentWindow)
 {
     ui->setupUi(this);
     ui->editor->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
@@ -79,11 +79,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->preview->setUrl(QUrl("qrc:/index.html"));
 
-    connect(ui->actionNew, &QAction::triggered, this, &MainWindow::onFileNew);
-    connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::onFileOpen);
-    connect(ui->actionSave, &QAction::triggered, this, &MainWindow::onFileSave);
-    connect(ui->actionSaveAs, &QAction::triggered, this, &MainWindow::onFileSaveAs);
-    connect(ui->actionExit, &QAction::triggered, this, &MainWindow::onExit);
+    connect(ui->actionNew, &QAction::triggered, this, &DocumentWindow::onFileNew);
+    connect(ui->actionOpen, &QAction::triggered, this, &DocumentWindow::onFileOpen);
+    connect(ui->actionSave, &QAction::triggered, this, &DocumentWindow::onFileSave);
+    connect(ui->actionSaveAs, &QAction::triggered, this, &DocumentWindow::onFileSaveAs);
+    connect(ui->actionExit, &QAction::triggered, this, &DocumentWindow::onExit);
 
     connect(ui->editor->document(), &QTextDocument::modificationChanged,
             ui->actionSave, &QAction::setEnabled);
@@ -93,12 +93,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->editor->setPlainText(defaultTextFile.readAll());
 }
 
-MainWindow::~MainWindow()
+DocumentWindow::~DocumentWindow()
 {
     delete ui;
 }
 
-void MainWindow::openFile(const QString &path)
+void DocumentWindow::openFile(const QString &path)
 {
     QFile f(path);
     if (!f.open(QIODevice::ReadOnly)) {
@@ -111,12 +111,12 @@ void MainWindow::openFile(const QString &path)
     ui->editor->setPlainText(f.readAll());
 }
 
-bool MainWindow::isModified() const
+bool DocumentWindow::isModified() const
 {
     return ui->editor->document()->isModified();
 }
 
-void MainWindow::onFileNew()
+void DocumentWindow::onFileNew()
 {
     if (isModified()) {
         QMessageBox::StandardButton button = QMessageBox::question(this, windowTitle(),
@@ -130,7 +130,7 @@ void MainWindow::onFileNew()
     ui->editor->document()->setModified(false);
 }
 
-void MainWindow::onFileOpen()
+void DocumentWindow::onFileOpen()
 {
     if (isModified()) {
         QMessageBox::StandardButton button = QMessageBox::question(this, windowTitle(),
@@ -147,7 +147,7 @@ void MainWindow::onFileOpen()
     openFile(path);
 }
 
-void MainWindow::onFileSave()
+void DocumentWindow::onFileSave()
 {
     if (m_filePath.isEmpty()) {
         onFileSaveAs();
@@ -167,7 +167,7 @@ void MainWindow::onFileSave()
     ui->editor->document()->setModified(false);
 }
 
-void MainWindow::onFileSaveAs()
+void DocumentWindow::onFileSaveAs()
 {
     QString path = QFileDialog::getSaveFileName(this,
         tr("Save MarkDown File"), "", tr("MarkDown File (*.md, *.markdown)"));
@@ -177,7 +177,7 @@ void MainWindow::onFileSaveAs()
     onFileSave();
 }
 
-void MainWindow::onExit()
+void DocumentWindow::onExit()
 {
     if (isModified()) {
         QMessageBox::StandardButton button = QMessageBox::question(this, windowTitle(),
