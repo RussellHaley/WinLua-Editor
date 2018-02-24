@@ -29,7 +29,7 @@ DISTFILES += \
     resources/3rdparty/MARKDOWN-LICENSE.txt \
     resources/3rdparty/MARKED-LICENSE.txt
 
-win32:INCLUDEPATH += "C:\Program Files\WinLua\Lua\5.3\include" "C:\Users\russh\Git\sol2\single"
+win32:INCLUDEPATH += "C:\Program Files\WinLua\Lua\5.3\include"
 #win32:INCLUDEPATH += "C:\Program Files\WinLua\Lua\5.3\include" "C:\Users\russh\Git\sol2\single"
 #unix:INCLUDEPATH += "/home/user/extra headers"
 

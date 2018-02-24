@@ -14,7 +14,7 @@ CXX           = cl
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WEBENGINEWIDGETS_LIB -DQT_WEBENGINECORE_LIB -DQT_QUICK_LIB -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_WEBCHANNEL_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_POSITIONING_LIB -DQT_CORE_LIB -DNDEBUG
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -O2 -MD -W3 -w44456 -w44457 -w44458 $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc $(DEFINES)
-INCPATH       = -I. -I"..\..\..\..\Program Files\WinLua\Lua\5.3\include" -I..\..\Git\sol2\single -I..\..\..\..\Qt\5.10.0\msvc2017_64\include -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebEngineWidgets -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebEngineCore -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtQuick -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtPrintSupport -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtANGLE -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebChannel -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtQml -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtNetwork -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtPositioning -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore -Irelease -I. -I\include -I..\..\..\..\Qt\5.10.0\msvc2017_64\mkspecs\win32-msvc 
+INCPATH       = -I. -I"..\..\..\..\Program Files\WinLua\Lua\5.3\include" -I..\..\..\..\Qt\5.10.0\msvc2017_64\include -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebEngineWidgets -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebEngineCore -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtQuick -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtPrintSupport -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtANGLE -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebChannel -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtQml -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtNetwork -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtPositioning -I..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore -Irelease -I. -I\include -I..\..\..\..\Qt\5.10.0\msvc2017_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /INCREMENTAL:NO /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
 LIBS          = /LIBPATH:C:\Qt\5.10.0\msvc2017_64\lib C:\Qt\5.10.0\msvc2017_64\lib\qtmain.lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib shell32.lib "C:\Program Files\WinLua\Lua\5.3\bin\lua53.lib" C:\Qt\5.10.0\msvc2017_64\lib\Qt5WebEngineWidgets.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5WebEngineCore.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Quick.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5PrintSupport.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Widgets.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Gui.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5WebChannel.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Qml.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Network.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Positioning.lib C:\Qt\5.10.0\msvc2017_64\lib\Qt5Core.lib 
@@ -323,7 +323,7 @@ release\moc_previewpage.cpp: ..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebEngi
 		previewpage.h \
 		release\moc_predefs.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\bin\moc.exe
-	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Users/russh/Git/sol2/single -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" previewpage.h -o release\moc_previewpage.cpp
+	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" previewpage.h -o release\moc_previewpage.cpp
 
 release\moc_document.cpp: ..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QObject \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qobject.h \
@@ -379,7 +379,7 @@ release\moc_document.cpp: ..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QObje
 		document.h \
 		release\moc_predefs.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\bin\moc.exe
-	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Users/russh/Git/sol2/single -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" document.h -o release\moc_document.cpp
+	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" document.h -o release\moc_document.cpp
 
 release\moc_mdiform.cpp: ..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qmainwindow.h \
@@ -490,10 +490,17 @@ release\moc_mdiform.cpp: ..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QMa
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QObject \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QWidget \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QString \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\sol.hpp" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\luaconf.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lualib.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lauxlib.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.hpp" \
+		sol_assert.hpp \
 		mdiform.h \
 		release\moc_predefs.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\bin\moc.exe
-	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Users/russh/Git/sol2/single -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" mdiform.h -o release\moc_mdiform.cpp
+	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" mdiform.h -o release\moc_mdiform.cpp
 
 release\moc_documentwindow.cpp: document.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QObject \
@@ -607,7 +614,7 @@ release\moc_documentwindow.cpp: document.h \
 		documentwindow.h \
 		release\moc_predefs.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\bin\moc.exe
-	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Users/russh/Git/sol2/single -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" documentwindow.h -o release\moc_documentwindow.cpp
+	C:\Qt\5.10.0\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include release/moc_predefs.h -IC:/Qt/5.10.0/msvc2017_64/mkspecs/win32-msvc -IC:/Users/russh/Documents/WinLua-Editor -I"C:/Program Files/WinLua/Lua/5.3/include" -IC:/Qt/5.10.0/msvc2017_64/include -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtWebEngineCore -IC:/Qt/5.10.0/msvc2017_64/include/QtQuick -IC:/Qt/5.10.0/msvc2017_64/include/QtPrintSupport -IC:/Qt/5.10.0/msvc2017_64/include/QtWidgets -IC:/Qt/5.10.0/msvc2017_64/include/QtGui -IC:/Qt/5.10.0/msvc2017_64/include/QtANGLE -IC:/Qt/5.10.0/msvc2017_64/include/QtWebChannel -IC:/Qt/5.10.0/msvc2017_64/include/QtQml -IC:/Qt/5.10.0/msvc2017_64/include/QtNetwork -IC:/Qt/5.10.0/msvc2017_64/include/QtPositioning -IC:/Qt/5.10.0/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt" documentwindow.h -o release\moc_documentwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -887,6 +894,13 @@ release\main.obj: main.cpp document.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qicon.h \
 		mdiform.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QWidget \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\sol.hpp" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\luaconf.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lualib.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lauxlib.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.hpp" \
+		sol_assert.hpp \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QApplication \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qapplication.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qcoreapplication.h \
@@ -1200,6 +1214,13 @@ release\mdiform.obj: mdiform.cpp mdiform.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QObject \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QWidget \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QString \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\sol.hpp" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\luaconf.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lualib.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lauxlib.h" \
+		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.hpp" \
+		sol_assert.hpp \
 		ui_mdiform.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QAction \
@@ -1251,14 +1272,7 @@ release\mdiform.obj: mdiform.cpp mdiform.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qdialog.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QMessageBox \
-		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		../../Git/sol2/single/sol.hpp \
-		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.h" \
-		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\luaconf.h" \
-		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lualib.h" \
-		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lauxlib.h" \
-		"..\..\..\..\Program Files\WinLua\Lua\5.3\include\lua.hpp" \
-		sol_assert.hpp
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qmessagebox.h
 
 release\documentwindow.obj: documentwindow.cpp documentwindow.h \
 		document.h \
@@ -1404,6 +1418,64 @@ release\documentwindow.obj: documentwindow.cpp documentwindow.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QMetaType \
 		ui_documentwindow.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QAction \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qaction.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QApplication \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qinputmethod.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QButtonGroup \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qbuttongroup.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QHBoxLayout \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QHeaderView \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qheaderview.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qabstractitemview.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qitemselectionmodel.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qstyleoption.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qvalidator.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qregularexpression.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qslider.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qabstractslider.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qstyle.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qtabbar.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qrubberband.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QMenu \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qmenu.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QMenuBar \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qmenubar.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QPlainTextEdit \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qplaintextedit.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qtextedit.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qtextdocument.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qtextcursor.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qtextformat.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qpen.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qabstracttextdocumentlayout.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qtextlayout.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qglyphrun.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qrawfont.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qfontdatabase.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QSplitter \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qsplitter.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QStatusBar \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QWidget \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWebEngineWidgets\qwebengineview.h \
+		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qpainter.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QFile \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QFileDialog \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qfiledialog.h \
@@ -1411,7 +1483,6 @@ release\documentwindow.obj: documentwindow.cpp documentwindow.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qdialog.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\QFontDatabase \
-		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtGui\qfontdatabase.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		..\..\..\..\Qt\5.10.0\msvc2017_64\include\QtCore\QTextStream \
