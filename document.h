@@ -59,15 +59,32 @@ class Document : public QObject
     Q_OBJECT
     Q_PROPERTY(QString text MEMBER m_text NOTIFY textChanged FINAL)
 public:
-    explicit Document(QObject *parent = nullptr) : QObject(parent) {}
+    explicit Document(QObject *parent = nullptr) : QObject(parent),
+    m_text(""),
+    m_modified(false)
+    {}
+
+    explicit Document(std::string path, QObject *parent = nullptr) : QObject(parent),
+    m_text(""),
+    m_modified(false),
+    m_path(QString::fromStdString(path))
+    {}
+
+//    explicit Document(QObject *parent, QString *path) : QObject(parent),
+//        m_text(""),
+//        m_modified(false),
+//        m_path(path){}
 
     void setText(const QString &text);
-
+    bool isModified() const;
+    QString path() const;
 signals:
     void textChanged(const QString &text);
 
 private:
     QString m_text;
+    bool m_modified;
+    QString m_path;
 };
 
 #endif // DOCUMENT_H

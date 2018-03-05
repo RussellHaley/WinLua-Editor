@@ -1,22 +1,25 @@
 TEMPLATE = app
 
 QT += webenginewidgets webchannel
-CONFIG += c++11
+CONFIG += c++14
 
 HEADERS += \
     previewpage.h \
     document.h \
     mdiform.h \
-    C:\Users\russh\Git\sol2\single\sol.hpp \
     sol_assert.hpp \
-    documentwindow.h
+    documentwindow.h \
+    envstate.h \
+    mdichild.h
 
 SOURCES = \
     main.cpp \
     previewpage.cpp \
     document.cpp \
     mdiform.cpp \
-    documentwindow.cpp
+    documentwindow.cpp \
+    envstate.cpp \
+    mdichild.cpp
 
 RESOURCES = \
     resources/markdowneditor.qrc

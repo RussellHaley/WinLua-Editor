@@ -1,9 +1,9 @@
 conf={
-project_name="WinLua Markdown Editor",
-wle_version = 0.1,
-project_version=1.9,
-base_dir="C:\\Users\\russh\\Documents\\WinLua-Editor\\WLE Docs",
-open_docs={
-	"default.md"
-	}
-}
+  base_dir = "C:\\Users\\russh\\Documents\\WinLua-Editor\\WLE Docs",
+  open_docs = {
+    "default.md"
+  } --[[table: 034CEE20]],
+  project_name = "MyProject 1",
+  project_version = 1.9,
+  wle_version = 0.1
+} 

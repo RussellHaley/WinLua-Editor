@@ -65,11 +65,11 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         mdiArea = new QMdiArea(centralwidget);
         mdiArea->setObjectName(QStringLiteral("mdiArea"));
-        mdiArea->setGeometry(QRect(60, 0, 741, 551));
+        mdiArea->setGeometry(QRect(40, 0, 761, 551));
         MdiForm->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MdiForm);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 20));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menu_View = new QMenu(menubar);
